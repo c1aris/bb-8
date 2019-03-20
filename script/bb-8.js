@@ -1,4 +1,4 @@
-/* Created by Ye Liu */
+/* Written by Ye Liu */
 
 var dW = document.getElementById('bb8').offsetWidth,
   dPos = 0,
@@ -17,10 +17,10 @@ var roll = function () {
         document.getElementsByClassName('outer-eye')[0].classList.remove('left')
         document.getElementsByClassName('bulls-eye')[0].classList.remove('left')
       }
-      if (myPos - dPos - dW + 100 > 100 && dSpeed < 5) {
+      if (myPos - dPos - dW > 0 && dSpeed < 5) {
         // speed up
         dSpeed = dSpeed * 1.05
-      } else if (myPos - dPos - dW + 100 < 100 && dSpeed > 1) {
+      } else if (myPos - dPos - dW < 0 && dSpeed > 1) {
         // slow down
         dSpeed = dSpeed / 1.05
       }
@@ -34,10 +34,10 @@ var roll = function () {
         document.getElementsByClassName('outer-eye')[0].classList.add('left')
         document.getElementsByClassName('bulls-eye')[0].classList.add('left')
       }
-      if (dPos + dW - myPos - 110 > 100 && dSpeed < 5) {
+      if (dPos + dW - myPos > 210 && dSpeed < 5) {
         // speed up
         dSpeed = dSpeed * 1.05
-      } else if (dPos + dW - myPos - 110 < 100 && dSpeed > 1) {
+      } else if (dPos + dW - myPos < 210 && dSpeed > 1) {
         // slow down
         dSpeed = dSpeed / 1.05
       }
