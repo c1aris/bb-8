@@ -1,11 +1,11 @@
 /* Written by Ye Liu */
 
-var dW = document.getElementById('bb8').offsetWidth,
-  dPos = 0,
-  dSpeed = 1,
-  dRot = 0,
-  myPos = 0.8 * document.body.clientWidth,
-  movingRight = true
+var dW = document.getElementById('bb8').offsetWidth
+var myPos = 0.8 * document.body.clientWidth
+var movingRight = true
+var dSpeed = 1
+var dPos = 0
+var dRot = 0
 
 var roll = function () {
   if (document.body.clientWidth > 767) {
@@ -44,7 +44,6 @@ var roll = function () {
       dPos = dPos - dSpeed
       dRot = dRot - dSpeed
     }
-
     document.getElementById('bb8').style.setProperty('left', dPos + 'px')
     document.getElementsByClassName('body')[0].style.setProperty('transform', 'rotate(' + dRot + 'deg)')
   } else {
